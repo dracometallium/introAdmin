@@ -1,0 +1,58 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+
+# Trabajo práctico número 00
+
+1.  Establezca una conexión remota con las máquinas de laboratorio utilizando
+`ssh`. Desde sistemas de tipo UNIX puede ejecutar el siguiente comando,
+recuerde reemplazar `$USER` por su usuario en los laboratorios.
+
+```
+ssh $USER@aula-ssh.fi.uncoma.edu.ar -p 60173
+```
+
+Si desea conectarse desde otros sistemas operativos, puede utilizar la
+herramienta 'Putty' (https://putty.org/).
+
+2.  Una vez conectados al escritorio remoto, ejecute el comando `hostname`
+para verificar que realmente se encuentra ejecutando en el equipo remoto. El
+comando debería retornar `aula-ssh`.
+
+3.  Ejecute los comandos `who` y `w` para ver que otros usuarios están
+conectados en este momento ¿Qué diferencias encuentra entre ambos comandos?
+
+4.  Utilice el comando `last | tac` para ver los últimos usuarios conectados.
+
+5.  Ejecute el comando `ls` para ver que archivos y directorios hay contenidos
+en su carpeta `$HOME`.
+
+6.  Ejecute el comando `ps` para ver que procesos se están ejecutando en el
+`shell` actual ¿Qué variante del `shell UNIX` esta utilizando?
+
+7.  Ejecute el siguiente comando: `cat /export/home/rcanibano/tux.tct`
+
+8.  ¿Cuál es la función del comando `uptime`? (Puede ejecutarlo de manera
+seguro, o consultar el manual)
+
+9.  Ejecute el comando `exit` para cerrar el `shell` y cerrar la conexión.

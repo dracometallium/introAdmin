@@ -1,0 +1,114 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+# El Shell UNIX
+
+**NOTA**: Para cada comando ejecutado realice el ejercicio de preguntarse:
+    -   ¿Cuál es el comando?
+    -   ¿Cuales son las opciones?
+    -   ¿Cuáles y de qué tipo son los argumentos? 
+    -   ¿Estoy utilizando caracteres especiales? ¿Cuáles?
+
+## Tips
+
+-   En modo normal los comandos `:vsplit` y `:split` dividen la ventana den
+    dos, permitiendo editar un archivo en cada una. `Ctrl+w` cambia el foco de
+    una ventana a otra. Con `:bn` y `:bp` permite cambiar el buffer que se
+    muestra en la ventana actual.
+
+-   En modo normal, el comando `:set number` muestra el número de líneas. Por
+    otro lado `:set nonumber` las oculta. Note que es sólo para referencia, el
+    número de línea no pertenece al texto.
+
+-   Los comandos `:r!comando_sh` y `:.!comando_sh`, permiten ejecutar un
+    comando del shell e insertar la salida en el archivo actual. Ejemplo:
+    `:r!ls` insertara la salida del comando `ls`.
+
+1.  Descargue script `pgIntro.sh` con el comando
+`wget skaia.mooo.com/pgIntro.sh,` y ejecútelo con `sh pgIntro.sh`. El script
+creara un directorio con múltiples subdirectorios y archivos para que pueda
+realizar los siguientes puntos. El nombre del directorio es `pg.XXXX`, donde
+`XXXX` varia con cada ejecución para no sobre escribir directorios ya
+existentes.
+
+2.  Ingrese al directorio `comodines`. Indique el comando y expresiones
+regulares necesarias para listar:
+    a.  Todos los archivos del directorio.
+    b.  Todos los archivos que con extensión `.pdf`.
+    c.  Todos los archivos que comiencen con el caracter `a`.
+    d.  Todos los archivos que comiencen con los caracteres `a` o `b`.
+    e.  Todos los archivos que comiencen con `aa` y tengan extensión `.jpg`.
+    f.  Todos los archivos que tengan como segundo caracter `x`.
+    g.  Todos los archivos que comiencen con `cc`, tengan extensión `.txt` y
+    cuyo número termine en un dígito entre 0 y 5.
+    h.  Todos los archivos que tengan un número entre 10 y 19.
+
+3.  Ingrese al directorio `grep`. Indique el comando y expresiones
+regulares necesarias obtener la siguiente información:
+    a.  Sabiendo que la palabra "elefantes" no aparece más de una vez por
+    linea ¿Cuántas veces aparece en el archivo `50-elefantes.txt`?
+    b.  ¿Qué archivo contiene la palabra "pingüino"? ¿Cuántas veces aparecen
+    las palabras "pingüino" y "pingüinos" en ese archivo?
+    c. Utilizando `vim` edite el archivo y cambien todas las ocurrencias de la
+    palabra "pingüino" y "pingüino" por "elefante" y "elefantes". Ayuda:
+    consulte `:help :s`.
+
+4.  Obtenga la lista de todos los programas en ejecución, incluyendo al 
+menos la siguiente información: dueño del proceso, identificador de proceso
+(PID), identificador del padre (PPID), comando que inició el proceso. Guarde
+esta salida en un archivo llamado `tp02-4.txt`.
+
+5.  De la lista anterior identifique cuál es el primer proceso del sistema.
+
+6.  Imprima todas las variables de entorno de su shell utilizando el comando
+`env`. Imprima el valor de la variable `LANG` ¿Qué función cumple esta
+variable?
+
+7.  Cambiar el valor de la variable `PS1` ejecutando:
+
+    PS1='Ingrese el comando a ejecutar: '
+
+Ejecutar algunos comandos al azar. ¿Qué observa?. Redefinir la variable
+ejecutando:
+
+    PS1='\u@\H:\w\$'
+
+En la página de manual de `bash` busque y lea la sección INDICADORES para
+entender cómo funciona esta última asignación.
+
+8.  Ejecutar la siguiente secuencia:
+
+    echo $HOME
+    cd
+    pwd
+    HOME=/tmp
+    cd
+    pwd
+
+¿Qué observa? ¿Qué función cumple la variable $HOME?
+
+9.  Agregue al archivo `tp02-4.txt` los resultados de la ejecución de los
+comandos `date` y `who`.
+
+10. Abra con `vim` el archivo `tp02-4.txt` y inserte en el mismo el
+resultado de ejecutar el comando `ls /` al comienzo del archivo.

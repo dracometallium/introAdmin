@@ -1,0 +1,89 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+# Administrando cuentas de usuario
+
+NOTA: Para la realización de esta práctica necesita acceso como usuario root.
+En los laboratorios (o si acede remotamente a ellos) puede utilizar el
+`netgui`. En ese caso, para verificar que los usuarios se crearon
+correctamente, debe ejecutar el comando `login`. Leer atentamente la siguiente
+presentación: http://rd.fi.uncoma.edu.ar/Herramientas.html
+
+1.  Describa cual es el contenido, función, y permisos de los archivos:
+    a.  /etc/passwd
+    b.  /etc/shadow
+    c.  /etc/group
+
+2.  Observe las últimas tres lineas de los archivos `passwd` y `shadow`, utilice el 
+comando `tail -3` para ello.
+
+Responda: 
+    a. ¿A qué grupo primario pertenece cada usuario? 
+    b. ¿Cuál es el uid de cada usuario?
+    c. ¿Qué número de campo contiene el nombre real?
+
+3.  ¿Cuántos usuarios hay definidos en el sistema? ¿Cuántos grupos?
+
+4.  Ejecute un comando que le permita filtrar, del archivo `passwd`, todos los
+nombres de usuario (username) en una columna (tip: user cut y filtrar el
+separador ":")
+
+5.  Usando los comandos `ps`, `cut`, `sort`, y `uniq`, liste todos los
+usuarios que tienen algún proceso en ejecución.
+
+5.  Agregue (sin utilizar los comandos `adduser` ni `useradd`) al usuario
+`estudiante`. Su directorio `HOME` debe ser la carpeta `/tmp`, y su grupo
+principal `nogroup`. No olvide establecer una contraseña predefinida.
+
+6.  Agregue al usuario `peperina` utilizando el comando `useradd`. Cree un
+directorio `HOME` en `/home/peperina` (no olvide establecer los permisos y
+dueño de este directorio y copiar los archivo del directorio `/etc/skel`). Su
+grupo principal debe ser `peperina`. Peperina es una admin tradicionalista de
+UNIX, prefiere que su shell sea `/bin/sh`.
+
+7.  Cree el usuario `bill` utilizando el comando `adduser`. Verifique la
+correcta creación de su directorio `HOME`.
+
+8.  El usuario Bill ha demostrado no ser de fiar. Desactive su acceso anulando
+su contraseña y cambiando su shell a `/sbin/nologin`.
+
+9.  Utilizando el comando `usermod` con la opción `-G` agregue a Peperina al
+grupo `sudo`. Verifique que se realizo el cambio con el comando `groups`.
+
+10. Indique como realizar las siguientes acciones utilizando el comando
+`usermod`:
+    a.  Cambiar el shell de un usuario.
+    b.  Cambiar el nombre completo de un usuario.
+    c.  Cambiar el directorio `HOME` de un usuario.
+    d.  Cambiar el grupo primario de un usuario.
+    e.  Inhabilitar un usuario ¿Qué modificación sobre los archivos `passwd` y
+    `shadow` realiza este comando?
+
+11. Si se agregan más usuario al mismo grupo ¿Cuál es el caracter separador?
+
+12. Utilice el comando `deluser` para eliminar al usuario Bill. Verifique que
+se han eliminado todos sus archivos y que no tiene procesos en ejecución.
+
+13. ¿Qué comandos puede usar un usuario para cambiar su shell, contraseña y
+directorio `HOME`, sin necesidad de ejecutar con permisos de root?
+

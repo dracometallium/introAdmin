@@ -1,0 +1,108 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+# Archivos y directorios
+
+1.  ¿En qué directorio se encuentra trabajando? ¿Qué comando utiliza para
+saberlo? ¿Qué comando utiliza para moverse entre directorios? ¿Qué es una ruta
+absoluta y una ruta relativa?
+
+2.  Sobre el directorio `/etc`:
+
+    a.  ¿Qué tipo de archivos hay en ese directorio ?
+    b.  En particular, qué tipo de archivos encuentra en el directorio
+    `/etc/rc2.d/`.
+    c.  Ejecute `file` y `ls -l` sobre dicho contenido para constatar el tipo
+    de archivos.
+
+3.  El archivo `/etc/passwd` contiene el listado de usuarios del sistema. Cada
+línea de texto en ese archivo define los detalles de un único usuario.
+
+    a.  Utilice `file` sobre el archivo ¿Qué información obtiene?
+    b.  Utilice `cat` para visualizar el contenido de `/etc/passwd`, en la
+    pantalla.
+    c.  ¿Cuántos usuarios hay definidos en el sistema?
+
+4.  El archivo `/etc/shadow` contiene información de las contraseñas de los
+usuarios.
+
+    a.  Utilice file sobre el archivo ¿Qué información obtiene?
+    b.  Utilice `cat` para visualizar el contenido de `/etc/passwd`, en la
+    pantalla.
+    c.  ¿Cómo se almacenan las contraseñas de los usuarios? ¿Es `/etc/passwd`
+    el único archivo utilizado para verificar la identidad del usuario?
+
+5.  Sobre el archivo `/etc/group`
+
+    a.  Utilice file sobre el archivo ¿Qué información obtiene?
+    b.  ¿Qué información contiene este archivo?
+    c.  ¿Cuántos grupos existen?
+
+6.  Sobre los directorios `/bin` y `/usr/bin`:
+
+    a.  Utilice el comando `file` sobre todos los archivos del directorio
+    (Ayuda: comodín *).
+    b.  ¿Qué tipo de archivos hay en ese directorio? Confirme leyendo "man
+    hier"
+
+7.  El comando `du` se puede utilizar para ver el espacio utilizado por
+archivos y directorios. Si ejecuta `du -h /etc` el sistema muestra de manera
+legible (el argumento -h significa "legible para las personas") el espacio
+utilizado en el directorio `/etc` (suma los tamaños de todos los archivos y
+directorios que estén dentro de `/etc`).
+
+    a.  ¿Cuánto espacio utiliza el directorio `/usr`?
+    b.  ¿Por qué el directorio `/usr` ocupa más espacio que `/etc`?
+    c.  ¿Cuánto espacio utiliza su directorio `HOME`?
+    d.  Con la ayuda del comando `sort` encuentre el directorio dentro de su
+    `HOME` que consume más espacio. Lea el manual de `sort` y `du`.
+
+8.  El archivo `/proc/meminfo` contiene información de la memoria utilizada en
+kilobytes:
+
+    a.  Utilice cat para ver la información
+    b.  ¿Qué tipo de archivo es?
+    c.  ¿Cuánta memoria total en MebiBytes tiene el sistema?
+    d.  ¿Cuánta memoria se está utilizando del total ? (en MebiBytes). Ayuda:
+    utilice el dato `MemFree`.
+
+9.  En el directorio `/proc` existen directorios con nombres "numéricos", que
+corresponden con el `PID` de los procesos del sistema. Estos directorios
+contienen información de los procesos (de los programas en ejecución).
+
+    a.  Liste los directorios en `/proc` cuyo nombre comience con un número
+    (liste solo los nombres de los directorios, no su contenido). Ayuda:
+    opción `-d` de `ls`.
+    b.  Cuente con `wc -l` el listado anterior ¿Cuántos procesos tiene en
+    ejecución el sistema?
+    c.  Ejecute `ps -ef`, y `ps -ef | wc -l` ¿Qué reporta `ps -ef`?
+    d.  ¿Coincide la cantidad de procesos reportados con `ps -ef` con el
+    obtenido en el segundo inciso de este ejercicio?
+
+10. El comando `find /var` lista todos los archivos y directorios que existen
+debajo de `/var`.
+
+    a.  ¿Cuántos archivos y directorios contiene el /var de su sistema?
+    b.  ¿Cuánto espacio utiliza en disco todo el `/var`?
+    c.  ¿Cuál es el directorio en donde el sistema guarda los mensajes de log?
+    d.  Mencione archivos de log de su sistema ¿De qué tipo son?

@@ -1,0 +1,196 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+
+# Trabajo práctico número 05: Repaso
+
+1.  ¿Qué comando se puede utilizar para establecer una conexión que nos
+permite ejecutar un shell de forma remota? ¿Qué indica cada uno de sus
+argumentos?
+
+2.  Conectado de forma remota a una computadora:
+    a.  Ejecute el comando `ps` (sin argumentos) para obtener el PID del shell
+    actual.
+    b.  Usando el comando `pstree -p` encuentre el PID del proceso `sshd`
+    padre de su shell (utilice pipes y un comando adecuado para facilitar la
+    búsqueda).
+    c.  Realice una nueva conexión a la computadora remota sin cerrar la
+    conexión anterior. Encuentre el PID del proceso `sshd` ancestro de los dos
+    shells.
+    d.  Usando el comando `who`, en conjunto con otros comandos, indique
+    cuantas conexiones hay al sistema.
+    e.  ¿Qué comando puede ejecutar para cerrar el shell actual?
+
+3.
+    a.  Con `vim` abra este documento y  otra ventana (dentro de `vim`, con el
+    comando `:new`) abra un archivo al que llamara `botellas`.
+    b.  Sin salir de `vim` copie el siguiente segmento de texto (delimitado
+    con ```) al archivo `botellas`. Guarde el archivo botellas.
+
+```
+#!/bin/sh
+
+for b in $(seq 100 -1 1); do
+    printf '%d botellas de ron en la pared.\n' "$b"
+    printf '%d botellas de ron en la pared.\n' "$b"
+    printf 'Toma una, bébela!\n'
+    if [ "$b" -gt 1 ]; then
+        printf 'Quedan %d botellas por beber!\n' "$((b-1))"
+    else
+        printf 'Ya no quedan botellas por beber!!\n'
+    fi
+done
+```
+
+    c.  Dele permiso de ejecución al archivo. Indique como se puede hacer esto
+    utilizando la notación octal y la simbólica.
+    d.  Ejecute el script para verificar que se ha copiado correctamente.
+    e.  Utilizando el comando `grep` y las opciones adecuadas encuentre en que
+    linea aparece por primera vez la frase "50 botellas".
+    f.  ¿Cuántas veces aparece la palabra "botellas" en la salida del
+    programa?
+    g.  Redirija la salida del script al archivo `botellas.txt`.
+    h.  Abra `botellas.txt` con `vim`. Sin salir del editor, utilice el
+    comando de UNIX `nl` para agregar el número de linea a cada linea del
+    documento.
+    i.  Sin salir de `vim`: ¿En que linea aparece por primera vez la frase "50
+    botellas"?
+    j.  Remplace todas las ocurrencias de la frase "de ron" por "de fernet",
+    guarde el archivo, y salga de `vim`.
+    k.  ¿Cuántas palabras tiene el archivo `botellas.txt`?
+
+4.  Cree un `vim` un archivo llamado `testmov.txt`:
+    a.  Inserte en el archivo el contenido de `/etc/passwd`.
+    b.  Muévase hasta la última linea del archivo con un solo comando. Indique
+    una opción en modo normal y la otra en modo comando.
+    c.  Muévase hasta la primera linea del archivo con un solo comando.
+    Indique una opción en modo normal y la otra en modo comando.
+    d.  Muévase hasta la quinta linea del archivo con un solo comando. Indique
+    una opción en modo normal y la otra en modo comando.
+    e.  Utilizando el comando `nl` agregue un número de linea a cada linea del
+    archivo.
+    f.  Con un único comando elimine las primeras tres lineas del archivo.
+    g.  Inserte la palabra "Hola" al principio de la primera linea.
+    h.  Inserte la palabra "Chau" al final de la primera linea.
+    i.  Elimine las primeras tres palabras de la primera linea.
+    j.  Deshaga el último cambio.
+    k.  Copie las primeras dos palabras de la primera linea, luego peguelas al
+    final de la última linea.
+    l.  ¿Cuál es la diferencia entre `dd` y `yy`?
+    m.  ¿Cuál es el la tecla de movimiento para avanzar una palabra? ¿Cuál es
+    aquella para retroceder?
+    n.  ¿Cuál es la diferencia entre `:.!hostname` y `:r!hostname`?
+
+5.  Descargue script `pgIntro.sh` con el comando
+`wget skaia.mooo.com/pgIntro.sh,` y ejecútelo con `sh pgIntro.sh`. El script
+creara un directorio con múltiples subdirectorios y archivos para que pueda
+realizar los siguientes puntos. El nombre del directorio es `pg.XXXX`, donde
+`XXXX` varia con cada ejecución para no sobre escribir directorios ya
+existentes.
+
+6.  Ingrese al directorio `comodines`. Indique el comando y expresiones
+regulares necesarias para listar:
+    a.  Todos los archivos del directorio.
+    b.  Todos los archivos que con extensión `.pdf` o `.txt`.
+    c.  Todos los archivos que comiencen con el caracter `b`.
+    d.  Todos los archivos que comiencen con los caracteres `a` o `b`, y
+    terminen con `.txt`.
+    e.  Todos los archivos que comiencen con `ax` o `bx`.
+    f.  Todos los archivos que tengan como segundo caracter `x` y tengan un
+    número múltiplo de 5.
+    g.  Todos los archivos que tengan un número entre 10 y 19.
+
+7.  Liste todos los procesos del sistema, incluyendo la información de su PID
+¿Cuál es proceso con PID 1?
+
+8.  Imprima todas las variables de entorno de su shell utilizando el comando
+`env`. Responda cual es el valor y la función de las siguientes variables:
+    a.  LANG.
+    b.  HOME.
+    c.  PWD.
+    d.  PS1.
+    e.  PATH.
+    f.  COLUMNS.
+    g.  LINES.
+
+9.  ¿En qué directorio se encuentra trabajando? ¿Qué comando utiliza para
+saberlo? ¿Qué comando utiliza para moverse entre directorios?
+
+10. ¿Cuál es la diferencia entre una ruta relativa y una absoluta? ¿Qué
+ventajas y desventajas tiene cada una sobre la otra?
+
+11. Indique cuales de las siguientes rutas son relativas y cuales absolutas:
+    a.  /
+    b.  ..
+    c.  ../cosas
+    d.  /home/peperina
+    e.  /home/peperina/./bin
+
+12. Para cada uno de los siguientes directorios indique cual es su finalidad
+descuerdo al `FHS` de UNIX, que tipo de archivos contiene en su mayoría
+(regulares, directorios, de bloque/caracter, links, pipes y sockets), quien es
+el dueño de los archivos, y cuales los permisos.
+    a.  /
+    b.  /etc/
+    c.  /home/
+    d.  /home/peperina/
+    e.  /dev/
+    f.  /proc/
+    g.  /var/
+    h.  /etc/rc2.d/
+    i.  /usr/
+    j.  /usr/bin/
+
+13. Indique una secuencia de comandos (conectados a través de tuberías) que
+permita encontrar los 3 subdirectorios más pesados de un directorio (Ayuda:
+con `head -n 3` puede mostrar solo las 3 primeras lineas).
+
+14. ¿Qué información proveen los archivos `/proc/meminfo` y `/proc/cpuinfo`?
+¿Y los directorios que tienen números?
+
+15. ¿Cuáles son los comandos para cambiar el dueño y grupo de un archivo?
+¿Cuál es el que se usa para cambiar los permisos? ¿Con que comando puede
+listar los grupos de un usuario?
+
+16. Explique el significado de los siguientes permisos representados en
+notación octal:
+    a.  750
+    b.  342
+    c.  440
+    d.  777
+
+17.  Ejecute la siguiente secuencia de comandos:
+
+     echo "Hola Mundo" > archivo1.txt
+     ln archivo1.txt archivo2.txt
+     ln archivo2.txt archivo3.txt
+     ln -s archivo3.txt archivo4.txt
+     ln -s archivo3.txt archivo5.txt
+
+    a.  ¿Cuántos links duros tiene `archivo1.txt`? Verifique con `stat`.
+    b.  Si se ejecuta el comando `echo bye >> archivo5.txt` ¿Qué sucederá con
+    los contenidos de `archivo1.txt`?
+    c.  Si se ejecuta `rm archivo3.txt` ¿Qué sucederá cuando se ejecute el
+    comando `cat archivo4.txt`?
+    d.  ¿Cuál es la salida de ejecutar el comando `file` sobre `archivo2.txt`
+    y sobre `archivo5.txt`?

@@ -1,0 +1,91 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+# Repaso
+
+1.  Indique en que archivo se almacena cada uno de los siguientes datos sobre
+los usuarios:
+
+    a.  Nombre de usuario.
+    b.  ID del usuario.
+    c.  Hash del password del usuario.
+    d.  Directorio HOME del usuario.
+    e.  Grupos a los que pertenece el usuario.
+    f.  Grupo principal del usuario.
+    g.  Directorio `HOME` del usuario.
+    h.  Shell principal del usuario.
+
+2. ¿Puede un usuario no tener una entrada en el archivo `shadow`? Verifique su
+suposición.
+
+3.  ¿Cuál es la utilidad de almacenar la información del la contraseña del
+usuario en un archivo diferente? ¿Cuáles son los permisos de cada archivo?
+
+4.  ¿Puede existir un grupo que no sea principal de ningún usuario? De ser
+posible, de un ejemplo.
+
+5.  Indique una secuencia de comandos conectados por tuberías para listar:
+    a.  La cantidad de usuarios del sistema.
+    b.  La cantidad de usuarios cuyo shell es `nologin`.
+    c.  Los shells utilizados por los usuarios (cada shell debe aparecer solo
+    una vez en la lista.
+
+6.  Explique que utilidad tiene la existencia de cuentas de usuario que no se
+pueden loguear al sistema.
+
+7.  Indique el proceso manual para crear una cuenta de usuario.
+
+8.  ¿Cuáles son las diferencias entre el comando `adduser` y `useradd`?
+
+9.  Indique que comandos se pueden utilizar para cada una de las siguientes
+tareas, y si un usuario no root puede ejecutar el comando de manera
+satisfactoria.
+    a.  Agregar un usuario a un grupo.
+    b.  Cambiar la contraseña de un usuario.
+    c.  Cambiar el nombre completo de un usuario.
+    d.  Cambiar el shellde un usuario.
+    e.  Cambiar el directorio HOMEde un usuario.
+    f.  Cambiar la contraseña de un usuario.
+
+10. ¿Cuál de las siguientes opciones indica el orden correcto de ejecución en
+el inicio de un sistema GNU/Linux?
+
+    a.  init/systemd-BIOS-Kernel-MBR(Grub/Lilo)
+    b.  BIOS-MBR(Grub/Lilo)-Kernel-init/systemd
+    c.  Kernel-MBR(Grub/Lilo)-init/systemd-BIOS
+    d.  MBR(Grub/Lilo)-BIOS-Kernel-init/systemd
+
+11. Describa con sus palabras el proceso de inicio desde que se energiza el
+equipo hasta que se logue exitosamente el usuario.
+
+12. ¿Cuál es la diferencia entre el archivo `/etc/default/grub` y el archivo
+`/boot/grub/grub.cfg`?
+
+13. ¿Qué opciones tiene el comando `shutdown`? ¿Cómo se puede programar para que
+el sistema se apague dentro de 10 minutos? ¿Cómo se puede cancelar el apagado¿
+
+14. ¿Cuáles son las diferencias, ventajas y desventajas entre los runlevels
+de `SysVinit` (el `init` clásico) y los `target units` de `systemd`?
+
+15. En un equipo que utilice `systemd` indique a que `target unit` se mapea
+cada `runlevel`.

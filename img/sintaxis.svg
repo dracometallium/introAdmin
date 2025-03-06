@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="171.30083mm"
+   height="67.733337mm"
+   viewBox="0 0 171.30083 67.733337"
+   version="1.1"
+   id="svg249"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs246" />
+  <g
+     id="layer1"
+     transform="translate(-7.9375017,-42.333332)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;stroke-width:0.264583"
+       x="7.2843122"
+       y="80.003365"
+       id="text1157"><tspan
+         id="tspan2194"
+         x="7.2843122"
+         y="80.003365">grep -n 03-sh.tex</tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#ff000b;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 8.4666667,67.733334 16.933333,59.266667 H 42.333334 L 50.8,67.733334"
+       id="path1510" />
+    <path
+       style="display:inline;fill:none;stroke:#ff000b;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 29.633333,50.8 v 8.466667"
+       id="path2066" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;stroke-width:0.264583"
+       x="11.854567"
+       y="48.468361"
+       id="text878"><tspan
+         id="tspan880"
+         x="11.854567"
+         y="48.468361">comando</tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#ff000b;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 59.266667,84.666667 8.466667,8.466667 H 76.2 l 8.466667,-8.466667"
+       id="path1158" />
+    <path
+       style="display:inline;fill:none;stroke:#ff000b;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 71.966667,93.133334 V 101.6"
+       id="path1160" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;stroke-width:0.264583"
+       x="51.723969"
+       y="108.30967"
+       id="text1164"><tspan
+         id="tspan1166"
+         x="51.723969"
+         y="108.30967">opciones</tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#ff000b;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 59.266667,67.733334 8.466667,-8.466667 H 169.33333 L 177.8,67.733334"
+       id="path1168" />
+    <path
+       style="display:inline;fill:none;stroke:#ff000b;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 118.53333,50.800001 v 8.466666"
+       id="path1170" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Cousine;-inkscape-font-specification:'Cousine, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;stroke-width:0.264583"
+       x="93.213936"
+       y="47.972267"
+       id="text1174"><tspan
+         id="tspan1176"
+         x="93.213936"
+         y="47.972267">argumentos</tspan></text>
+  </g>
+</svg>

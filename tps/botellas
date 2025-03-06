@@ -1,0 +1,12 @@
+#!/bin/sh
+
+for b in $(seq 100 -1 1); do
+    printf '%d botellas de ron en la pared.\n' "$b"
+    printf '%d botellas de ron en la pared.\n' "$b"
+    printf 'Toma una, bébela!\n'
+    if [ "$b" -gt 1 ]; then
+        printf 'Quedan %d botellas por beber!\n' "$((b-1))"
+    else
+        printf 'Ya no quedan botellas por beber!!\n'
+    fi
+done

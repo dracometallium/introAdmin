@@ -1,0 +1,148 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+# Archivos y directorios: seguridad
+
+1.  ¿Qué tipo de permisos tiene sobre el `HOME` de su usuario? ¿Se pueden
+cambiar los permisos?
+
+2.  Ejecute la siguiente secuencia de comandos:
+
+     echo archivo1 > archivo1.txt
+     ln archivo1.txt archivo2.txt
+
+    a.  ¿`archivo2.txt` está vació? ¿Qué contiene dicho archivo?
+    b. ¿Qué sucedería con `archivo2.txt` si ejecuto el siguiente comando:
+        echo "otra linea" >> archivo1.txt
+    c.  Verifique su hipótesis ejecutando los siguientes comandos:
+        cat archivo1.txt
+        cat archivo2.txt
+        ls -i -1 archivo1.txt archivo2.txt
+    d.  ¿Cómo se le conoce a este tipo de referencia?
+    e.  ¿Qué sucedería si en vez de ejecutar `ln`, hubiera ejecutado `ln -s`?
+    f.  ¿Sucedería lo mismo si en vez de ejecutar `ln` hubiera ejecutado el
+    comando `cp`?
+    g.  ¿Qué tipo de información arroja el comando `stat`?
+    h.  ¿Qué sucede si ejecuto `echo chau > archivo2.txt`? Verifique sus
+    hipótesis.
+    i.  ¿Es posible ejecutar el siguiente comando? ¿Por qué?
+        ln /tmp tmp
+
+3.  Ejecute el comando `ls -l .` ¿Qué diferencia existe si yo ejecuto el
+comando `ls -l ..`?
+
+4.  Teniendo en cuenta la siguiente salida de la ejecución del comando `ls`:
+        52692066 -rwxrwxr--  1 root  testing    0 abr 25 17:14 archivo
+        52823060 drwxr-xr-x  2 root  testing 4096 abr 25 17:14 archivo1
+        52823061 drwxrwxr--  2 root  develop 4096 abr 25 17:14 archivo2
+        52693273 -r--r--r--  1 root  develop    0 abr 25 17:14 archivo3
+        52692066 -rwxrwxr--  1 root  testing    0 abr 25 17:14 archivo4
+
+    a.  ¿Con que argumentos se debe ejecutar el comando para que muestre esta
+    información? (pista: "inodo")
+    b.  ¿Cuántos archivos y directorios hay en la siguiente salida del comando?
+    c.  ¿Quién es el dueño de `archivo1`? ¿Quién puede escribir sobre él?
+    d.  ¿Quién puede escribir sobre `archivo2`?
+    e.  ¿Puede el usuario `root` escribir el texto "Hola Mundo!" sobre
+    `archivo3`? ¿Por qué?
+    f.  ¿Qué permisos debería tener `archivo3`, para que cualquier usuario del
+    grupo `develop` y del grupo `testing` puedan escribir sobre él? Exprese
+    dichos permisos en base octal.
+    g.  ¿Cuántos archivos hay almacenados regulares hay almacenados en el
+    disco?
+
+5   ¿Qué significa cada una de las siguientes salidas de permisos en octal?
+
+    a.  666
+    b.  770
+    c.  640
+    d.  444
+
+6.  ¿De que forma puede revocar los permisos de escritura del grupo sin
+cambiar los restantes?
+
+7.  ¿Qué significa el permiso de ejecución (`x`) sobre los directorios?
+
+8.  Un usuario desea establecer los permisos de un árbol de directorios con
+raíz en el directorio `dir` para que el usuario y el grupo puedan listar, leer
+y escribir (pero no ejecutar) los archivos, mientras que el resto no deben
+tener ningún tipo de permiso ¿Cuál de los siguientes comandos es el más
+apropiado? ¿Por qué?
+
+    a.  chmod –R 660 dir
+    b.  chmod –R 770 dir
+    c.  chmod –R u+rw,g+rw,o-rwx dir
+    d.  chmod –R u=rw,g=rw,o= dir
+
+9.  Si se ejecuta el comando del inciso anterior ¿Podrán ser accesibles los
+subdirectorios de `dir`? ¿Qué opción del comando `chmod` nos provee con una
+solución?
+
+10. ¿Cómo se puede cambiar el propietario y el grupo de un árbol de directorio
+completo (un directorio, sus subdirectorios y todos los archivos que
+contienen) con un solo comando? De un ejemplo.
+
+11.
+    a.  ¿A qué grupos pertenece su usuario?
+    b.  ¿Como podemos crear nuevos grupos?
+    c.  ¿Cómo agregamos grupos a estos?
+    d.  ¿Puede un usuario normal cambiar el dueño de un archivo a `root`?
+    ¿Puede cambiar el usuario de un archivo a otro usuario?
+    e.  ¿Puede un usuario cambiar el grupo de un archivo a uno que no
+    pertenece?
+
+12. Para cada uno de los siguientes directorios y archivos indique su dueño,
+grupo, permisos y analice por que esta configurado de esa manera.
+
+    a.  /
+    b.  /var/log
+    c.  Algún archivo regular del directorio `/var/log`.
+    d.  /tmp
+    e.  /dev
+
+13. ¿Qué tipo de archivos se encuentran en el directorio `/dev`?
+
+14. ¿En que archivo están especificados los grupos a los cuales pertenece un
+usuario? ¿Qué permisos tiene este archivo?
+
+15. Cree un archivo llamado `dance` con el siguiente contenido (marcado entre
+```):
+
+```
+#!/bin/sh
+while true; do
+    printf "(>'-')>  "
+    sleep 0.5
+    printf "\r<('-'<)  "
+    sleep 0.5
+    printf "\r^(' - ')^"
+    sleep 0.5
+    printf "\r<('-'<)  "
+    sleep 0.5
+    printf "\r\n"
+done
+```
+
+    a.  ¿Qué permisos tiene el archivo al crearlo con `vim`?
+    b.  Agregue permisos de ejecución al archivo. Puede ejecutarlo con
+    `./dance`, y finalizar la ejecución con <Ctrl+c>.

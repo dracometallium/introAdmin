@@ -1,0 +1,236 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+
+# `VIm`
+
+**IMPORTANTE**: `VIm` posee un poderoso manual. Para acceder a este, en modo
+    normal debe tipear `:help` seguido de la tecla `<enter>`. Para acceder a
+    la ayuda de un comando tema especifico, puede tipear `:help TEMA` (por
+    ejemplo, para más información del comando `w`, puede ejecutar `:help w`).
+    Cuando se le solicite investigar, use el manual de `VIm`.
+
+1.  Cree un archivo con `VIm`, llamado `miPrimerArchivo.txt`. Escriba 5 lineas
+de texto. TIP: para salir, presione la tecla `<Esc>`, seguido de `:q` y la
+tecla `<ENTER>`.
+
+2.  Verifique que el archivo se guardo correctamente ejecutando el comando
+`cat miPrimerArchivo.txt`.
+
+3.  Vuelva a abrir el archivo con `VIm`. Agregue una nueva última linea.
+Guarde los cambios y verifique los resultados.
+
+## Navegación esencial en VIm
+
+4.  Descargue el archivo `linux.txt` que se encuentra en _PEDCO_ y ábralo con
+`VIm`.
+
+5. Practique moverse usando solo las teclas: `hjkl`. Es muy importante que
+sólo utilice estas teclas y se vaya familiarizando con ellas:
+
+    -   Presionar `j` 18 veces ¿Qué sucede?
+    -   Presionar `k` 4 veces ¿Qué sucede?
+    -   Presionar `l` 8 veces ¿Qué sucede?
+    -   Presionar `h` 8 veces ¿Qué sucede?
+
+6.  Copie y pegue toda la línea en la que esta parado.
+
+7.  Practique como moverse en modo normal por página, hacia arriba y hacia
+abajo (TIP: `Ctrl+f` y `Ctrl+b`).
+
+8.  Practique como mover el cursor palabra por palabra (es decir, el cursor
+debe ir "saltando" de palabra en palabra). Investigue cómo hacerlo hacia
+adelante y hacia atrás.
+
+9.  Resuelva el siguiente problema: En el archivo `linux.txt` deberá buscar la
+primer línea del mail que escribió Linus Torvalds a la comunidad, una vez que
+lo encuentre deberá:
+
+    -   Posicionarse en la primer letra (en este caso es la H "Hola a todos
+        los que ...."
+    -   Deberá de un solo salto quedar parado en la palabra ` minix` (en la
+        primer letra (m)). OBS: Solo deberá ejecutar una sola instrucción de
+        `VIm`.
+    -   Si pudo hacer lo anterior, ahora haga el reverso y deberá quedar
+        posicionado como cuando empezó el ejercicio anterior.
+
+10. Practique como movernos a una línea específica (TIP: A jugar con `g`):
+    -   ¿Cómo podemos hacer para ir a la primer línea del inicio de nuestro
+        archivo en un solo paso?
+    -   Ahora que ha logrado el punto anterior ¿Podría en un paso ir a la
+        última línea de nuestro archivo?
+    -   Bien, ahora que ha logrado lo anterior ¿qué puedo hacer para ir a la
+        línea x? Ejemplo: Ir en un solo paso al inicio de la línea 16 ¿y a la
+        42?.
+11. Modo de comandos:
+    -   Explique con sus palabras que sucede cuando hago lo siguiente. Ir a
+        modo normal, pasar a modo de comando y escriba lo siguiente :44<ENTER>
+        (TIP: modo de comandos es cuando nos permite ejecutar instrucciones
+        dentro de `VIm`).
+    -   ¿Se le ocurre alguna idea para ir al inicio? 
+    -   Explique con sus palabras que sucede cuando hacemos :$<ENTER>.
+    -   Para confirmar que el punto anterior esta correcto ejecute Ctrl-G ¿Qué
+        nota?
+
+## Borrando texto
+
+12. Practique borrar caracteres individuales:
+    -   ¿Con que tecla se puede borrar un caracter?
+    -   ¿Qué sucede si antes de presionar esa tecla presiona `4`? (TIP:
+        ejecute el comando al inicio de una linea larga)
+
+13. ¿Con que comando se puede borrar toda una palabra? ¿Cómo puedo borrar 3
+palabras? ¿Cómo puedo borrar una palabra hacia atrás?
+
+
+
+14. Dado el siguiente texto (delimitado por ```):
+
+```
+Vim es un MADARIAGA editoor de texxto de ENRIQUETA gran utilidad paraAAAAAAAAAAAAAAAAAAAAAA 
+los FELINI administraadores DUDAS de sistemaas lo utilizan muchhho ya MISTERIOSO 
+que MONT está disponible LINIERS en cualquier DECUR plataformaBBBBBBBBBBBBBBBBBBBBBBBBB
+UNIX. Esto significa ASIMOV que podrá usaar Vim en BODOC cualquier 
+VENADO sistema de tipo NINE UNIX. Además, resulta ORSAI recomendable
+su utilizacción, YO ROBOT  porque ARRIETA requiere SELKNAM de muy pocosCCCCCCCCCCCCCCCCCCCC
+recurrsos SABATO para su SOBRE HEROES Y TUMBAS funcionamiento
+lo que permite utilizar Vim EL OTRO en maquinas remotas o BORGES DDDDDDDDDDDD
+cuando no LAS LARVAS pueda ejecutar ABELARDO CASTILLO otros programas 
+debido a problemas MUCHA con el SUERTE harddware CON o el EL  sisteema EXAMEN.
+```
+
+    -   Elimine todas las palabras que no correspondan al texto.
+    -   Elimine las letras que estén demás en el texto.
+    -   Elimine las primeras 4 palabras en forma consecutiva del texto.
+
+
+15. De la siguiente linea, elimine todo el texto después de la primera coma.
+
+> Pedro Pinedo Pérez Pintado Pablo Pereira, pobre pintor portugués, pinta preciosos paisajes por poca plata, para poder pasar por París.
+
+## Cortar, copiar y pegar (Delete, Yank, and Put)
+
+16. Abra una copia original del archivo `linux.txt` (Si lo ha modificado en
+ejercicios anteriores, por favor cree una nueva copia original).
+
+17. Intercambie las lineas 4 y 5 del archivo. Para ello deberá borrar la línea
+5 con "dd" y luego ubicarse en el lugar correspondiente y pegar con el comando
+"p".
+
+Observe este ejemplo para comprender como debería quedar resuelto el problema:
+
+Linux comienza en 1991 como un proyecto personal del estudiante finlandés Linus Torvalds: crear un nuevo núcleo de sistema operativo libre.
+El núcleo Linux resultante ha estado marcado por un crecimiento constante a lo largo de su historia.
+
+Resultado esperado:
+
+El núcleo Linux resultante ha estado marcado por un crecimiento constante a lo largo de su historia.
+Linux comienza en 1991 como un proyecto personal del estudiante finlandés Linus Torvalds: crear un nuevo núcleo de sistema operativo libre.
+
+18. Deberá investigar cómo funciona esto: ¿Dónde se guarda la información
+cuando hago "dd"? ¿Puedo volver a pegar "p" muchas veces? ¿Por qué sucede
+esto?
+
+20. Copie 3 veces la linea que fue borrada con "dd" justo debajo de la que
+acaba de hacer.
+
+21. Dada la siguiente sentencia: "Toods los pájraos pueden ovlar", Investigue
+como puede resolver este problema "cortando y pegando" pero de a 1 carácter a
+la vez. Explique brevemente como lo hizo.
+
+22. Vuelva al archivo de linux y busque la sentencia: "Linus Torvalds, creador
+del núcleo Linux" y modifique el nombre del creador borrando cada palabra y
+agregando Richard Stallman en su lugar. Guarde los cambios. Pero
+inmediatamente debe deshacer este error, investigue de que forma puede hacer
+"undo" o deshacer y vuelva a guardar los cambios.
+
+
+23. Elimine las líneas completas que no corresponden al texto. 
+
+Ayuda: 
+    -   `yy` copia una linea completa.
+    -   `dd` borra una línea completa.
+    -   `:N1,N2y` copia el bloque de lineas consecutivas entre la línea N1 y N2
+    -   `:N1,N2d` borra el bloque de lineas consecutivas entre la línea N1 y N2
+    -   Si elimina alguna linea que era correcta recuerde como hizo para
+        deshacer la operación en el ejercicio anterior.
+
+```
+Aprender Vim es muy pero muy difícil al principio. Tomará tiempo. 
+LOS DIAS DEL VENADO, LILIANA BODOC, EPICA FANTÁSTICA, ARGENTINA. 
+LOS DIAS DEL VENADO, LILIANA BODOC, EPICA FANTÁSTICA, ARGENTINA. 
+LOS DIAS DEL VENADO, LILIANA BODOC, EPICA FANTÁSTICA, ARGENTINA. 
+Será como intentar aprender a tocar un instrumento de música. Por lo 
+LA ULTIMA TIERRA DE LA GENTE, SOLEDAD ARRIETA, NOVELA, NEUQUINA. 
+LA ULTIMA TIERRA DE LA GENTE, SOLEDAD ARRIETA, NOVELA, NEUQUINA. 
+tanto, no sueñe con ser más eficiente con Vim, en menos de tres días, 
+que con cualquier otro editor que ya conozca. Es más, conocer Vim de 
+SOBRE HEROES Y TUMBAS, NOVELA, ERNESTO SABATO, ARGENTINA.
+SOBRE HEROES Y TUMBAS, NOVELA, ERNESTO SABATO, ARGENTINA.
+manera eficiente puede tomar dos o más semanas en vez de sólo tres días.
+EL OTRO, CUENTO, JORGE LUIS BORGES, ARGENTINO
+EL OTRO, CUENTO, JORGE LUIS BORGES, ARGENTINO
+```
+
+24. Ahora que tiene algunas herramientas para el manejo eficiente de líneas, resuelva el siguiente problema:
+
+Suponga que tiene un archivo con el siguiente contenido:
+
+```
+algo
+algunos
+prue
+prueba
+bebé
+tiempo
+suerte
+mujer
+auto
+camión
+prueba
+clase
+facultad
+mujer 
+tiempo
+auto
+camión
+mujer
+auto
+camión
+suerte
+suerte
+```
+
+Usando `VIm` ¿De qué manera puedo efectuar un ordenamiento alfabético
+invertido (Z - A) de dicho contenido, evitando colocar la información
+duplicada? Muestre cómo lo haría y el archivo resultante del ordenamiento.
+
+
+99. Ejecute la siguiente secuencia
+
+    -   Ejecute el comando `vimtutor`.
+    -   Guarde el contenido de `vimtutor` en un archivo en su home, ejecutando en modo normal:
+        `:saveas tutor.txt`.
+    -   Agregue su nombre y apellido al comienzo del archivo.
+    -   Complete las lecciones ofrecidas por el tutor.
+    -   Guarde sus cambios a medida que avanza.

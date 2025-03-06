@@ -1,0 +1,79 @@
+                                 Introducción
+                          Administración de Sistemas
+                          ==========================
+
+                                 ######  ###
+                             ##########  ######
+                           ############  #####   #
+                         ########          ##  #####
+                        ######   ######        ######
+                        #####  ##########       ##
+                       ###### ############       #####
+                       #####  ############       #####
+                       ######  ##########        #####
+                        #####    ######
+                        #######               ######
+                          #######             ######
+                           ###########  #####
+                              ########  #######
+                                  ###   #####
+
+                           Facultad de informática
+                       Universidad Nacional del Comahue
+
+# Inicio y apagado
+
+1.  El gestor de arranque más popular actualmente se llama `GRUB`. Investigue
+dónde se encuentran los archivos de configuración del mismo dentro del
+sistema.
+
+2.  Explique con sus palabras cuál es la función del `GRUB` ¿Qué otras
+alternativas existen?
+
+3.  ¿En que archivo podemos ver los argumentos que se pasaron al kernel de
+LINUX?
+
+4.  ¿Qué archivo debe editarse para cambiar los argumentos que se pasan al
+kernel? ¿Qué comando debe ejecutarse?
+
+5.  Obtenga el nivel de ejecución actual ¿Qué comando utilizó? ¿Conoce algún
+otro comando para obtener el nivel de ejecución actual?
+
+6.  ¿En que archivo se establece el nivel de ejecución estándar en los
+sistemas con `init` de `SysV`? ¿Qué información contiene el archivo? NOTA: si
+no tiene acceso a una maquina con el `init` de`SysV`, puede utilizar las
+maquinas virtuales del `netGUI`.
+
+7.  ¿Cuál es la función de los archivos `/lib/systemd/system/runlevel*` que se
+encuentran en los sistemas que tienen instalado `systemd`? ¿De que tipo son
+estos archivos?
+
+8.  Utilizando el comando `telinit` cambie el nivel de ejecución al de usuario
+individual. CUIDADO: Se recomienda hacer esto en una máquina virtual.
+
+    a.  ¿Con qué argumentos ejecutó el comando `telinit`?
+    b.  ¿Qué sucedió y por qué cree que sucedió?
+    c.  Liste los procesos en ejecución ¿Cuántos procesos están ejecutando?
+    d.  ¿Qué pasos deben llevarse a cabo para volver al estado de
+    multiusuario?
+    e.  Liste los procesos en ejecución ¿Es distinta la lista ¿Cuántos
+    procesos están ejecutando?
+
+9.  Utilizando el comando `shutdown` cambie a nivel de ejecución seis, pero
+con un tiempo de postergación de diez segundos, y tal como se envíe el mensaje
+"Estaremos de vuelta en unos instantes" en todas las terminales del sistema
+¿Qué comando ejecutó? ¿Qué sucedió?
+
+10.  Explique con sus palabras qué sucede durante el apagado de un sistema
+operativo.
+
+11.  ¿Tiene alguna importancia el apagado correcto del sistema o es equivalente
+a desconectar el suministro eléctrico?
+
+12. ¿Qué comando utilizaría para apagar el sistema ahora.
+
+13. ¿En qué directorio se encuentra el comando `shutdown`? ¿Cuáles son sus
+permisos? ¿Qué sucede si un usuario normal (no root) ejecuta el comando?
+
+14. Asumiendo que se indico al sistema apagarse en 10 minutos ¿qué opción del
+comando `shutdown` le permite suspender esa orden de apagado?
