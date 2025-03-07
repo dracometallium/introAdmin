@@ -33,7 +33,8 @@ ssh $USER@aula-ssh.fi.uncoma.edu.ar -p 60173
 ```
 
 Si desea conectarse desde otros sistemas operativos, puede utilizar la
-herramienta 'Putty' (https://putty.org/).
+herramienta `Putty` (https://putty.org/), o utilizar la interfaz web
+disponible en `https://aula-ssh.fi.uncoma.edu.ar`.
 
 2.  Una vez conectados al escritorio remoto, ejecute el comando `hostname`
 para verificar que realmente se encuentra ejecutando en el equipo remoto. El
@@ -43,6 +44,8 @@ comando debería retornar `aula-ssh`.
 conectados en este momento ¿Qué diferencias encuentra entre ambos comandos?
 
 4.  Utilice el comando `last | tac` para ver los últimos usuarios conectados.
+Explique con sus palabras la funcionalidad de cada uno de los comandos
+utilizados.
 
 5.  Ejecute el comando `ls` para ver que archivos y directorios hay contenidos
 en su carpeta `$HOME`.
@@ -50,9 +53,17 @@ en su carpeta `$HOME`.
 6.  Ejecute el comando `ps` para ver que procesos se están ejecutando en el
 `shell` actual ¿Qué variante del `shell UNIX` esta utilizando?
 
-7.  Ejecute el siguiente comando: `cat /export/home/rcanibano/tux.tct`
+7.  Ejecute el siguiente comando: `cat /export/home/rcanibano/tux.tct`.
 
 8.  ¿Cuál es la función del comando `uptime`? (Puede ejecutarlo de manera
 seguro, o consultar el manual)
 
-9.  Ejecute el comando `exit` para cerrar el `shell` y cerrar la conexión.
+9.  Ejecute los siguientes comandos:
+    -   `cat /etc/wgetrc`
+    -   `more /etc/wgetrc` (usar las flechas y `q` para salir)
+    -   `less /etc/wgetrc` (usar las flechas y `q` para salir)
+
+Explique en sus palabras la diferencia entre los comandos `cat`, `more`, y
+`less`.
+
+10. Ejecute el comando `exit` para cerrar el `shell` y cerrar la conexión.
