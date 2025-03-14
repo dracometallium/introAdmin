@@ -31,25 +31,25 @@
 
 ## Tips
 
--   En modo normal los comandos `:vsplit` y `:split` dividen la ventana den
-    dos, permitiendo editar un archivo en cada una. `Ctrl+w` cambia el foco de
-    una ventana a otra. Con `:bn` y `:bp` permite cambiar el buffer que se
-    muestra en la ventana actual.
+-   En modo normal los comandos `:vsplit` y `:split` dividen la ventana en
+    dos, permitiendo editar un archivo en cada una. `Ctrl+w Ctrl+w` (si, dos
+    veces) cambia el foco de una ventana a otra. Con `:bn` y `:bp` permite
+    cambiar el buffer que se muestra en la ventana actual.
 
 -   En modo normal, el comando `:set number` muestra el número de líneas. Por
     otro lado `:set nonumber` las oculta. Note que es sólo para referencia, el
-    número de línea no pertenece al texto.
+    número de línea no se almacena en el archivo de texto.
 
 -   Los comandos `:r!comando_sh` y `:.!comando_sh`, permiten ejecutar un
     comando del shell e insertar la salida en el archivo actual. Ejemplo:
     `:r!ls` insertara la salida del comando `ls`.
 
 1.  Descargue script `pgIntro.sh` con el comando
-`wget skaia.mooo.com/pgIntro.sh,` y ejecútelo con `sh pgIntro.sh`. El script
-creara un directorio con múltiples subdirectorios y archivos para que pueda
-realizar los siguientes puntos. El nombre del directorio es `pg.XXXX`, donde
-`XXXX` varia con cada ejecución para no sobre escribir directorios ya
-existentes.
+`wget https://raw.githubusercontent.com/dracometallium/introAdmin/refs/heads/main/tps/playgroundIntro.sh`
+y ejecútelo con `sh pgIntro.sh`. El script creara un directorio con múltiples
+subdirectorios y archivos para que pueda realizar los siguientes puntos. El
+nombre del directorio es `pg.XXXX`, donde `XXXX` varia con cada ejecución para
+no sobre escribir directorios ya existentes.
 
 2.  Ingrese al directorio `comodines`. Indique el comando y expresiones
 regulares necesarias para listar:
