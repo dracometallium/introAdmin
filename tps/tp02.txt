@@ -45,7 +45,7 @@
     `:r!ls` insertara la salida del comando `ls`.
 
 1.  Descargue script `pgIntro.sh` con el comando
-`wget https://raw.githubusercontent.com/dracometallium/introAdmin/refs/heads/main/tps/playgroundIntro.sh`
+`wget https://raw.githubusercontent.com/dracometallium/introAdmin/refs/heads/main/tps/pgIntro.sh`
 y ejecútelo con `sh pgIntro.sh`. El script creara un directorio con múltiples
 subdirectorios y archivos para que pueda realizar los siguientes puntos. El
 nombre del directorio es `pg.XXXX`, donde `XXXX` varia con cada ejecución para
