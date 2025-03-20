@@ -270,7 +270,7 @@
     \frametitle{Interpretes de linea de comandos}
     \framesubtitle{Patrones y comodines}
 
-    El \cw{Shell} probé herramientas que permiten hacer referencia a
+    El \cw{Shell} provee herramientas que permiten hacer referencia a
     múltiples archivos y directorios de una manera concisa utilizando
     patrones. El \cw{Shell} remplaza el patrón por el nombre de los
     archivos o directorios del directorio actual que coincidan este antes de
@@ -309,8 +309,8 @@
                 por \cw{a b}, mientras que el patrón \cw{??} sera
                 remplazado por \cw{aa ab}.\pause
         \end{itemize}
-        \item Conjuntos (\cw{[abc]} o \cw{[RANGO]}) comodín que
-            concuerda con un conjunto (o rango) de caracteres.
+        \item Conjuntos (\cw{[abc]} o \cw{[RANGO]}) comodín que concuerda con
+            único caracter dentro de un conjunto (o rango) de caracteres.
         \begin{itemize}
             \item[Ejemplo:] Si el directorio actual contiene los archivos
                 \cw{a0 a1 ... a9 b0 b1 ... b9 c0 c1 ... c9}, el patrón
@@ -398,9 +398,9 @@
     anidar substituciones, y tienen limites más claros.
 
     \begin{itemize}
-        \item[Ejemplo:] Si la salida del comando \cw{who} es
+        \item[Ejemplo:] Si la salida del comando \cw{whoami} es
             \cw{peperina}, ejecutar \cw{echo \dq{}Hola
-            \$(who)\dq{}} imprimirá \cw{Hola Peperina}.
+            \$(whoami)\dq{}} imprimirá \cw{Hola Peperina}.
     \end{itemize}
 
 \end{frame}
