@@ -89,3 +89,30 @@ de `SysVinit` (el `init` clásico) y los `target units` de `systemd`?
 
 15. En un equipo que utilice `systemd` indique a que `target unit` se mapea
 cada `runlevel`.
+
+16. ¿Cuáles son los comandos para cambiar el dueño y grupo de un archivo?
+¿Cuál es el que se usa para cambiar los permisos? ¿Con que comando puede
+listar los grupos de un usuario?
+
+17. Explique el significado de los siguientes permisos representados en
+notación octal:
+    a.  750
+    b.  342
+    c.  440
+    d.  777
+
+18.  Ejecute la siguiente secuencia de comandos:
+
+     echo "Hola Mundo" > archivo1.txt
+     ln archivo1.txt archivo2.txt
+     ln archivo2.txt archivo3.txt
+     ln -s archivo3.txt archivo4.txt
+     ln -s archivo3.txt archivo5.txt
+
+    a.  ¿Cuántos links duros tiene `archivo1.txt`? Verifique con `stat`.
+    b.  Si se ejecuta el comando `echo bye >> archivo5.txt` ¿Qué sucederá con
+    los contenidos de `archivo1.txt`?
+    c.  Si se ejecuta `rm archivo3.txt` ¿Qué sucederá cuando se ejecute el
+    comando `cat archivo4.txt`?
+    d.  ¿Cuál es la salida de ejecutar el comando `file` sobre `archivo2.txt`
+    y sobre `archivo5.txt`?

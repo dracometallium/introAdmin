@@ -21,128 +21,148 @@
                            Facultad de informática
                        Universidad Nacional del Comahue
 
-# Archivos y directorios: seguridad
 
-1.  ¿Qué tipo de permisos tiene sobre el `HOME` de su usuario? ¿Se pueden
-cambiar los permisos?
+# Trabajo práctico número 04: Repaso
 
-2.  Ejecute la siguiente secuencia de comandos:
+1.  ¿Qué comando se puede utilizar para establecer una conexión que nos
+permite ejecutar un shell de forma remota? ¿Qué indica cada uno de sus
+argumentos?
 
-     echo archivo1 > archivo1.txt
-     ln archivo1.txt archivo2.txt
+2.  Conectado de forma remota a una computadora:
+    a.  Ejecute el comando `ps` (sin argumentos) para obtener el PID del shell
+    actual.
+    b.  Usando el comando `pstree -p` encuentre el PID del proceso `sshd`
+    padre de su shell (utilice pipes y un comando adecuado para facilitar la
+    búsqueda).
+    c.  Realice una nueva conexión a la computadora remota sin cerrar la
+    conexión anterior. Encuentre el PID del proceso `sshd` ancestro de los dos
+    shells.
+    d.  Usando el comando `who`, en conjunto con otros comandos, indique
+    cuantas conexiones hay al sistema.
+    e.  ¿Qué comando puede ejecutar para cerrar el shell actual?
 
-    a.  ¿`archivo2.txt` está vació? ¿Qué contiene dicho archivo?
-    b. ¿Qué sucedería con `archivo2.txt` si ejecuto el siguiente comando:
-        echo "otra linea" >> archivo1.txt
-    c.  Verifique su hipótesis ejecutando los siguientes comandos:
-        cat archivo1.txt
-        cat archivo2.txt
-        ls -i -1 archivo1.txt archivo2.txt
-    d.  ¿Cómo se le conoce a este tipo de referencia?
-    e.  ¿Qué sucedería si en vez de ejecutar `ln`, hubiera ejecutado `ln -s`?
-    f.  ¿Sucedería lo mismo si en vez de ejecutar `ln` hubiera ejecutado el
-    comando `cp`?
-    g.  ¿Qué tipo de información arroja el comando `stat`?
-    h.  ¿Qué sucede si ejecuto `echo chau > archivo2.txt`? Verifique sus
-    hipótesis.
-    i.  ¿Es posible ejecutar el siguiente comando? ¿Por qué?
-        ln /tmp tmp
-
-3.  Ejecute el comando `ls -l .` ¿Qué diferencia existe si yo ejecuto el
-comando `ls -l ..`?
-
-4.  Teniendo en cuenta la siguiente salida de la ejecución del comando `ls`:
-        52692066 -rwxrwxr--  1 root  testing    0 abr 25 17:14 archivo
-        52823060 drwxr-xr-x  2 root  testing 4096 abr 25 17:14 archivo1
-        52823061 drwxrwxr--  2 root  develop 4096 abr 25 17:14 archivo2
-        52693273 -r--r--r--  1 root  develop    0 abr 25 17:14 archivo3
-        52692066 -rwxrwxr--  1 root  testing    0 abr 25 17:14 archivo4
-
-    a.  ¿Con que argumentos se debe ejecutar el comando para que muestre esta
-    información? (pista: "inodo")
-    b.  ¿Cuántos archivos y directorios hay en la siguiente salida del comando?
-    c.  ¿Quién es el dueño de `archivo1`? ¿Quién puede escribir sobre él?
-    d.  ¿Quién puede escribir sobre `archivo2`?
-    e.  ¿Puede el usuario `root` escribir el texto "Hola Mundo!" sobre
-    `archivo3`? ¿Por qué?
-    f.  ¿Qué permisos debería tener `archivo3`, para que cualquier usuario del
-    grupo `develop` y del grupo `testing` puedan escribir sobre él? Exprese
-    dichos permisos en base octal.
-    g.  ¿Cuántos archivos hay almacenados regulares hay almacenados en el
-    disco?
-
-5   ¿Qué significa cada una de las siguientes salidas de permisos en octal?
-
-    a.  666
-    b.  770
-    c.  640
-    d.  444
-
-6.  ¿De que forma puede revocar los permisos de escritura del grupo sin
-cambiar los restantes?
-
-7.  ¿Qué significa el permiso de ejecución (`x`) sobre los directorios?
-
-8.  Un usuario desea establecer los permisos de un árbol de directorios con
-raíz en el directorio `dir` para que el usuario y el grupo puedan listar, leer
-y escribir (pero no ejecutar) los archivos, mientras que el resto no deben
-tener ningún tipo de permiso ¿Cuál de los siguientes comandos es el más
-apropiado? ¿Por qué?
-
-    a.  chmod –R 660 dir
-    b.  chmod –R 770 dir
-    c.  chmod –R u+rw,g+rw,o-rwx dir
-    d.  chmod –R u=rw,g=rw,o= dir
-
-9.  Si se ejecuta el comando del inciso anterior ¿Podrán ser accesibles los
-subdirectorios de `dir`? ¿Qué opción del comando `chmod` nos provee con una
-solución?
-
-10. ¿Cómo se puede cambiar el propietario y el grupo de un árbol de directorio
-completo (un directorio, sus subdirectorios y todos los archivos que
-contienen) con un solo comando? De un ejemplo.
-
-11.
-    a.  ¿A qué grupos pertenece su usuario?
-    b.  ¿Como podemos crear nuevos grupos?
-    c.  ¿Cómo agregamos grupos a estos?
-    d.  ¿Puede un usuario normal cambiar el dueño de un archivo a `root`?
-    ¿Puede cambiar el usuario de un archivo a otro usuario?
-    e.  ¿Puede un usuario cambiar el grupo de un archivo a uno que no
-    pertenece?
-
-12. Para cada uno de los siguientes directorios y archivos indique su dueño,
-grupo, permisos y analice por que esta configurado de esa manera.
-
-    a.  /
-    b.  /var/log
-    c.  Algún archivo regular del directorio `/var/log`.
-    d.  /tmp
-    e.  /dev
-
-13. ¿Qué tipo de archivos se encuentran en el directorio `/dev`?
-
-14. ¿En que archivo están especificados los grupos a los cuales pertenece un
-usuario? ¿Qué permisos tiene este archivo?
-
-15. Cree un archivo llamado `dance` con el siguiente contenido (marcado entre
-```):
+3.
+    a.  Con `vim` abra este documento y  otra ventana (dentro de `vim`, con el
+    comando `:new`) abra un archivo al que llamara `botellas`.
+    b.  Sin salir de `vim` copie el siguiente segmento de texto (delimitado
+    con ```) al archivo `botellas`. Guarde el archivo.
 
 ```
 #!/bin/sh
-while true; do
-    printf "(>'-')>  "
-    sleep 0.5
-    printf "\r<('-'<)  "
-    sleep 0.5
-    printf "\r^(' - ')^"
-    sleep 0.5
-    printf "\r<('-'<)  "
-    sleep 0.5
-    printf "\r\n"
+
+for b in $(seq 100 -1 1); do
+    printf '%d botellas de ron en la pared.\n' "$b"
+    printf '%d botellas de ron en la pared.\n' "$b"
+    printf 'Toma una, bébela!\n'
+    if [ "$b" -gt 1 ]; then
+        printf 'Quedan %d botellas por beber!\n' "$((b-1))"
+    else
+        printf 'Ya no quedan botellas por beber!!\n'
+    fi
 done
 ```
 
-    a.  ¿Qué permisos tiene el archivo al crearlo con `vim`?
-    b.  Agregue permisos de ejecución al archivo. Puede ejecutarlo con
-    `./dance`, y finalizar la ejecución con <Ctrl+c>.
+    c.  Dele permiso de ejecución al archivo con comando `chmod +x botellas`.
+    d.  Ejecute el script para verificar que se ha copiado correctamente con
+    `./botellas`.
+    e.  Utilizando el comando `grep` y las opciones adecuadas encuentre en que
+    linea aparece por primera vez la frase "50 botellas".
+    f.  ¿Cuántas veces aparece la palabra "botellas" en la salida del
+    programa?
+    g.  Redirija la salida del script al archivo `botellas.txt`.
+    h.  Abra `botellas.txt` con `vim`. Sin salir del editor, utilice el
+    comando de UNIX `nl` para agregar el número de linea a cada linea del
+    documento.
+    i.  Sin salir de `vim`: ¿En que linea aparece por primera vez la frase "50
+    botellas"?
+    j.  Remplace todas las ocurrencias de la frase "de ron" por "de fernet",
+    guarde el archivo, y salga de `vim`.
+    k.  ¿Cuántas palabras tiene el archivo `botellas.txt`?
+
+4.  Cree un `vim` un archivo llamado `testmov.txt`:
+    a.  Inserte en el archivo el contenido de `/etc/passwd`.
+    b.  Muévase hasta la última linea del archivo con un solo comando. Indique
+    una opción en modo normal y la otra en modo comando.
+    c.  Muévase hasta la primera linea del archivo con un solo comando.
+    Indique una opción en modo normal y la otra en modo comando.
+    d.  Muévase hasta la quinta linea del archivo con un solo comando. Indique
+    una opción en modo normal y la otra en modo comando.
+    e.  Utilizando el comando `nl` agregue un número de linea a cada linea del
+    archivo.
+    f.  Con un único comando elimine las primeras tres lineas del archivo.
+    g.  Inserte la palabra "Hola" al principio de la primera linea.
+    h.  Inserte la palabra "Chau" al final de la primera linea.
+    i.  Elimine las primeras tres palabras de la primera linea.
+    j.  Deshaga el último cambio.
+    k.  Copie las primeras dos palabras de la primera linea, luego peguelas al
+    final de la última linea.
+    l.  ¿Cuál es la diferencia entre `dd` y `yy`?
+    m.  ¿Cuál es el la tecla de movimiento para avanzar una palabra? ¿Cuál es
+    aquella para retroceder?
+    n.  ¿Cuál es la diferencia entre `:.!hostname` y `:r!hostname`?
+
+5.  Descargue script `pgIntro.sh` con el comando
+`wget https://raw.githubusercontent.com/dracometallium/introAdmin/refs/heads/main/tps/pgIntro.sh`
+y ejecútelo con `sh pgIntro.sh`. El script creara un directorio con múltiples
+subdirectorios y archivos para que pueda realizar los siguientes puntos. El
+nombre del directorio es `pg.XXXX`, donde `XXXX` varia con cada ejecución
+para no sobre escribir directorios ya existentes.
+
+6.  Ingrese al directorio `comodines`. Indique el comando y expresiones
+regulares necesarias para listar:
+    a.  Todos los archivos del directorio.
+    b.  Todos los archivos que con extensión `.pdf` o `.txt`.
+    c.  Todos los archivos que comiencen con el caracter `b`.
+    d.  Todos los archivos que comiencen con los caracteres `a` o `b`, y
+    terminen con `.txt`.
+    e.  Todos los archivos que comiencen con `ax` o `bx`.
+    f.  Todos los archivos que tengan como segundo caracter `x` y tengan un
+    número múltiplo de 5.
+    g.  Todos los archivos que tengan un número entre 10 y 19.
+
+7.  Liste todos los procesos del sistema, incluyendo la información de su PID
+¿Cuál es proceso con PID 1?
+
+8.  Imprima todas las variables de entorno de su shell utilizando el comando
+`env`. Responda cual es el valor y la función de las siguientes variables:
+    a.  LANG.
+    b.  HOME.
+    c.  PWD.
+    d.  PS1.
+    e.  PATH.
+    f.  COLUMNS.
+    g.  LINES.
+
+9.  ¿En qué directorio se encuentra trabajando? ¿Qué comando utiliza para
+saberlo? ¿Qué comando utiliza para moverse entre directorios?
+
+10. ¿Cuál es la diferencia entre una ruta relativa y una absoluta? ¿Qué
+ventajas y desventajas tiene cada una sobre la otra?
+
+11. Indique cuales de las siguientes rutas son relativas y cuales absolutas:
+    a.  /
+    b.  ..
+    c.  ../cosas
+    d.  /home/peperina
+    e.  /home/peperina/./bin
+
+12. Para cada uno de los siguientes directorios indique cual es su finalidad
+de acuerdo al `FHS` de UNIX, que tipo de archivos contiene en su mayoría
+(regulares, directorios, de bloque/caracter, links, pipes y sockets).
+    a.  /
+    b.  /etc/
+    c.  /home/
+    d.  /home/peperina/
+    e.  /dev/
+    f.  /proc/
+    g.  /var/
+    h.  /etc/rc2.d/
+    i.  /usr/
+    j.  /usr/bin/
+
+13. Indique una secuencia de comandos (conectados a través de tuberías) que
+permita encontrar los 3 subdirectorios más pesados de un directorio (Ayuda:
+con `head -n 3` puede mostrar solo las 3 primeras lineas).
+
+14. ¿Qué información proveen los archivos `/proc/meminfo` y `/proc/cpuinfo`?
+¿Y los directorios que tienen números?
