@@ -166,3 +166,17 @@ con `head -n 3` puede mostrar solo las 3 primeras lineas).
 
 14. ¿Qué información proveen los archivos `/proc/meminfo` y `/proc/cpuinfo`?
 ¿Y los directorios que tienen números?
+
+15. Indique cual es la linea de comando de `vim` (`:` seguido de una función)
+que permite moverse a la linea `N` ¿Cómo se puede mover a la primera linea, y
+como al final del documento?
+
+16. ¿De que manera puede insertar la salida del comando `uname -a` en la
+primera linea de este archivo sin salir de `vim`? ¿De que manera en la
+tercera? ¿Cómo se puede insertar en la última?
+
+17. ¿Cuál es la diferencia entre `:0!whoami` y `:0r!whoami`?
+
+18. ¿Cuál es el comando que permite saltar a la próxima palabra? ¿Cuál es el
+que permite saltar al final de la palabra? ¿Cuál es el comando para volver a
+la palabra anterior?
