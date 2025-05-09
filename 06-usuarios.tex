@@ -89,6 +89,8 @@
             \item Proceso manual.
             \item Herramientas del sistema.
         \end{itemize}
+    \item \emph{Pluggable Authentication Module (PAM)} y \emph{Lightweight
+        Directory Access Protocol (LDAP)}.
 
 \end{itemize}
 
@@ -258,6 +260,33 @@
 
 \end{frame}
 
+\begin{frame}
+
+    \frametitle{\emph{Pluggable Authentication Module (PAM)}}
+
+    Conjunto de bibliotecas que realizan las tareas de autenticación. Permite
+    separar los mecanismos de autenticación de las aplicaciones que las
+    requieren.
+
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/pamDiag.pdf}
+        \captionsetup{textfont=tiny,labelformat=empty,justification=centering}
+        \caption{\ccPublicDomain\cite{pamDiag}}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{\emph{Lightweight Directory Access Protocol (LDAP)}}
+
+    Es un protocolo de consulta y administración de datos sobre los objetos de
+    una organización. Un uso común en los sistemas \emph{GNU/LINUX} es el de
+    mantener la información de las cuentas de usuarios de manera centralizada.
+
+\end{frame}
+
 \againframe{temario}
 
 \begin{frame}
@@ -266,20 +295,20 @@
 \maketitle
 
 \end{frame}
-%
-%\newcounter{lastPage}
-%\setcounter{lastPage}{\number\value{page}}
-%
-%\begin{frame}%[allowframebreaks]
-%
-%\frametitle{Atribuciones}
-%
-%\bibliographystyle{abbrv}
-%\setbeamertemplate{bibliography item}{\insertbiblabel}
-%\tiny
-%\bibliography{refimg}
-%\end{frame}
-%
-%\setcounter{page}{\number\value{lastPage}}
+
+\newcounter{lastPage}
+\setcounter{lastPage}{\number\value{page}}
+
+\begin{frame}%[allowframebreaks]
+
+\frametitle{Atribuciones}
+
+\bibliographystyle{abbrv}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\tiny
+\bibliography{refimg}
+\end{frame}
+
+\setcounter{page}{\number\value{lastPage}}
 
 \end{document}
