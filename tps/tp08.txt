@@ -38,36 +38,37 @@ los usuarios:
 2. ¿Puede un usuario no tener una entrada en el archivo `shadow`? Verifique su
 suposición.
 
-3.  ¿Cuál es la utilidad de almacenar la información del la contraseña del
+3.  ¿Cuál es la utilidad de almacenar la información de la contraseña del
 usuario en un archivo diferente? ¿Cuáles son los permisos de cada archivo?
 
 4.  ¿Puede existir un grupo que no sea principal de ningún usuario? De ser
 posible, de un ejemplo.
 
-5.  Indique una secuencia de comandos conectados por tuberías para listar:
+5.  ¿Cuál es la finalidad del usuario `nouser` y el grupo `nogroup`?
+
+6.  Indique una secuencia de comandos conectados por tuberías para listar:
     a.  La cantidad de usuarios del sistema.
     b.  La cantidad de usuarios cuyo shell es `nologin`.
     c.  Los shells utilizados por los usuarios (cada shell debe aparecer solo
     una vez en la lista.
 
-6.  Explique que utilidad tiene la existencia de cuentas de usuario que no se
+7.  Explique que utilidad tiene la existencia de cuentas de usuario que no se
 pueden loguear al sistema.
 
-7.  Indique el proceso manual para crear una cuenta de usuario.
+8.  Indique el proceso manual para crear una cuenta de usuario.
 
-8.  ¿Cuáles son las diferencias entre el comando `adduser` y `useradd`?
+9.  ¿Cuáles son las diferencias entre el comando `adduser` y `useradd`?
 
-9.  Indique que comandos se pueden utilizar para cada una de las siguientes
+10. Indique que comandos se pueden utilizar para cada una de las siguientes
 tareas, y si un usuario no root puede ejecutar el comando de manera
 satisfactoria.
     a.  Agregar un usuario a un grupo.
     b.  Cambiar la contraseña de un usuario.
     c.  Cambiar el nombre completo de un usuario.
-    d.  Cambiar el shellde un usuario.
-    e.  Cambiar el directorio HOMEde un usuario.
-    f.  Cambiar la contraseña de un usuario.
+    d.  Cambiar el shell de un usuario.
+    e.  Cambiar el directorio HOME de un usuario.
 
-10. ¿Cuál de las siguientes opciones indica el orden correcto de ejecución en
+11. ¿Cuál de las siguientes opciones indica el orden correcto de ejecución en
 el inicio de un sistema GNU/Linux?
 
     a.  init/systemd-BIOS-Kernel-MBR(Grub/Lilo)
@@ -75,33 +76,33 @@ el inicio de un sistema GNU/Linux?
     c.  Kernel-MBR(Grub/Lilo)-init/systemd-BIOS
     d.  MBR(Grub/Lilo)-BIOS-Kernel-init/systemd
 
-11. Describa con sus palabras el proceso de inicio desde que se energiza el
+12. Describa con sus palabras el proceso de inicio desde que se energiza el
 equipo hasta que se logue exitosamente el usuario.
 
-12. ¿Cuál es la diferencia entre el archivo `/etc/default/grub` y el archivo
+13. ¿Cuál es la diferencia entre el archivo `/etc/default/grub` y el archivo
 `/boot/grub/grub.cfg`?
 
-13. ¿Qué opciones tiene el comando `shutdown`? ¿Cómo se puede programar para que
-el sistema se apague dentro de 10 minutos? ¿Cómo se puede cancelar el apagado¿
+14. ¿Qué opciones tiene el comando `shutdown`? ¿Cómo se puede programar para que
+el sistema se apague dentro de 10 minutos? ¿Cómo se puede cancelar el apagado?
 
-14. ¿Cuáles son las diferencias, ventajas y desventajas entre los runlevels
+15. ¿Cuáles son las diferencias, ventajas y desventajas entre los runlevels
 de `SysVinit` (el `init` clásico) y los `target units` de `systemd`?
 
-15. En un equipo que utilice `systemd` indique a que `target unit` se mapea
+16. En un equipo que utilice `systemd` indique a que `target unit` se mapea
 cada `runlevel`.
 
-16. ¿Cuáles son los comandos para cambiar el dueño y grupo de un archivo?
+17. ¿Cuáles son los comandos para cambiar el dueño y grupo de un archivo?
 ¿Cuál es el que se usa para cambiar los permisos? ¿Con que comando puede
 listar los grupos de un usuario?
 
-17. Explique el significado de los siguientes permisos representados en
+18. Explique el significado de los siguientes permisos representados en
 notación octal:
     a.  750
     b.  342
     c.  440
     d.  777
 
-18.  Ejecute la siguiente secuencia de comandos:
+19.  Ejecute la siguiente secuencia de comandos:
 
      echo "Hola Mundo" > archivo1.txt
      ln archivo1.txt archivo2.txt
