@@ -30,7 +30,7 @@ $(FIGURAS_PDF): %.pdf : %.svg
 		export-filename:%s;\
 		export-overwrite;\
 		export-do;" $^ $@\
-		| inkscape --shell
+		| SELF_CALL=NO inkscape --shell
 
 $(LOGOS_PDF): %.pdf : %.svg
 	printf "file-open:%s;\
@@ -38,7 +38,7 @@ $(LOGOS_PDF): %.pdf : %.svg
 		export-filename:%s;\
 		export-overwrite;\
 		export-do;" $^ $@\
-		| inkscape --shell
+		| SELF_CALL=NO inkscape --shell
 
 $(CODIGO_PDF): %.pdf :%.c
 	printf ":set syntax \n\
@@ -53,7 +53,7 @@ $(CODIGO_PDF): %.pdf :%.c
 		export-area-drawing;\
 		export-filename:%s;\
 		export-do" $(<:.c=.ps) $@ \
-		| inkscape --shell
+		| SELF_CALL=NO inkscape --shell
 	rm $(<:.cpp=.ps)
 
 $(ANIMATION_DONE): %.done : %.svg
