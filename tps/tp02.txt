@@ -70,7 +70,7 @@ regulares necesarias obtener la siguiente información:
     b.  ¿Qué archivo contiene la palabra "pingüino"? ¿Cuántas veces aparecen
     las palabras "pingüino" y "pingüinos" en ese archivo?
     c. Utilizando `vim` edite el archivo y cambien todas las ocurrencias de la
-    palabra "pingüino" y "pingüino" por "elefante" y "elefantes". Ayuda:
+    palabra "pingüino" y "pingüinos" por "elefante" y "elefantes". Ayuda:
     consulte `:help :s`.
 
 4.  Obtenga la lista de todos los programas en ejecución, incluyendo al 
