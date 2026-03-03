@@ -38,7 +38,7 @@ disponible en `https://aula-ssh.fi.uncoma.edu.ar`.
 
 2.  Una vez conectados al escritorio remoto, ejecute el comando `hostname`
 para verificar que realmente se encuentra ejecutando en el equipo remoto. El
-comando debería retornar `aula-ssh`.
+comando debería retornar `aula-ssh-new`.
 
 3.  Ejecute los comandos `who` y `w` para ver que otros usuarios están
 conectados en este momento ¿Qué diferencias encuentra entre ambos comandos?
@@ -56,7 +56,7 @@ en su carpeta `$HOME`.
 7.  Ejecute el siguiente comando: `cat /export/home/rcanibano/tux.tct`.
 
 8.  ¿Cuál es la función del comando `uptime`? (Puede ejecutarlo de manera
-seguro, o consultar el manual)
+segura. Para más información consultar el manual)
 
 9.  Ejecute los siguientes comandos:
     -   `cat /etc/wgetrc`
