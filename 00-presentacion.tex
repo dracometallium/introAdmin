@@ -78,19 +78,29 @@ Administración de sistemas}}
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=temario]
 
     \frametitle{Temario}
 
 \begin{itemize}
 
-\item ¿Quiénes?
+\item Sobre la materia:
+    \begin{itemize}
+    \item ¿Quiénes?
+    \item ¿Qué?
+    \item ¿Cuándo y dónde?
+    \item ¿Cómo?
+    \end{itemize}
 
-\item ¿Qué?
-
-\item ¿Cuándo y dónde?
-
-\item ¿Cómo?
+\item ¿Qué tareas realiza un administrador de sistemas?
+\item ¿Qué método nos permite una administración medianamente homogénea?
+    \begin{itemize}
+        \item Sistemas de tipo \texttt{UNIX}.
+        \item ¿Qué es un shell?
+        \item Interfaz por linea de comandos: el \emph{UNIX Shell}.
+        \item \emph{Secure Shell}: \codeword{ssh}.
+        \item Editor \codeword{Vim}.
+    \end{itemize}
 
 \end{itemize}
 
@@ -226,7 +236,7 @@ Administración de sistemas}}
     \begin{figure}
         \includegraphics[height=0.65\textheight]{img/conf_pedco.pdf}
         \captionsetup{textfont=tiny,labelformat=empty}
-        \caption{\url{}https://pedco.uncoma.edu.ar/message/notificationpreferences.php}
+        \caption{\url{https://pedco.uncoma.edu.ar/message/notificationpreferences.php}}
     \end{figure}
 \end{itemize}
 
@@ -235,7 +245,7 @@ Administración de sistemas}}
 \begin{frame}
 
     \frametitle{SIU Guaraní}
-    \framesubtitle{\url{https://siufai.uncoma.edu.ar/}}
+    \framesubtitle{\url{https://wguarani.uncoma.edu.ar}}
 
 \begin{itemize}
     \item Sistema de Gestión Académica Guaraní.
@@ -290,8 +300,8 @@ Administración de sistemas}}
         cátedra.
         \begin{itemize}
             \item Se recomienda igualmente hacerlos de la forma más prolija
-                posible ya que serán el documento principal para estudiar para
-                los exámenes.
+                posible ya que podrán ser consultados para los trabajos
+                obligatorios.
         \end{itemize}
 
 \end{itemize}
@@ -300,78 +310,196 @@ Administración de sistemas}}
 
 \begin{frame}
 
-    \frametitle{Metodología}
-    \framesubtitle{Cursar la materia}
+    \frametitle{Metodología de evaluación}
 
 \begin{itemize}
 
-    \item Aprobar los dos exámenes parciales (o sus respectivos
-        recuperatorios).
-    \item Cada parcial se aprueba teniendo un $60\%$ de las respuestas
-        correctas.
-    \item Se evalúan los contenidos prácticos y teóricos vistos en los
-        trabajos prácticos.
-        %Se pueden consultar los trabajos prácticos resueltos.
-    \item Los exámenes recuperatorios se llevaran a cabo al final del
-        cuatrimestre.
-
+    \item Dos trabajos prácticos obligatorios: el segundo sera integrador, y
+        requerirá de una defensa presencial.
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
 
-    \frametitle{Metodología}
-    \framesubtitle{Promocionar la materia}
+    \frametitle{Administración de sistemas}
+    \framesubtitle{¿Qué es administrar un sistema?}
 
 \begin{itemize}
-
-    \item Si se aprueban ambos exámenes con una nota superior a $80\%$, se
-        promociona la materia.
+    \item Administración de recursos:
         \begin{itemize}
-            \item \emph{¡Los recuperatorios cuentan! Y se puede rendir
-                el recuperatorio para subir la nota.}
+            \item Redes.
+            \item Almacenamiento.
+            \item Bases de datos.
+            \item Impresoras.
+            \item \emph{etc.}
+        \end{itemize}
+    \item Seguridad y protección:
+        \begin{itemize}
+            \item Usuarios.
+            \item Detección de anomalías.
+            \item Copias de respaldo.
+            \item \emph{etc.}
+        \end{itemize}
+    \item Automatización de tareas.
+    \item Documentación.
+    \item \emph{etc.}, \emph{etc.}, \emph{etc.}...
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Administración de sistemas}
+    \framesubtitle{¿Qué método nos permite una administración medianamente
+    homogénea?}
+
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.80\textheight]{img/jurassicPark.png}
+        \captionsetup{textfont=tiny,labelformat=empty}
+        \caption{``\emph{It is a \texttt{UNIX} system! I know this!}''\\
+        Jurassic Park (1993)}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Administración de sistemas}
+    \framesubtitle{¿Qué método nos permite una administración medianamente
+    homogénea?}
+
+    Los sistemas \texttt{UNIX}, \texttt{POSIX}, y
+    \texttt{UNIX-like}\footnote{\texttt{UNIX} es una marca registrada, y el
+    uso del termino \texttt{UNIX-like} no esta aprobado oficialmente. Sin
+    embargo, su uso esta fuertemente extendido y arraigado en el léxico
+    informático.} permiten una administración y uso uniforme de distintos
+    sistemas de computo. Si bien hay diferencias, a grandes rasgos comparten:
+
+\begin{itemize}
+    \item Jerarquía de directorios.
+    \item Software.
+    \item Configuración.
+    \item La \emph{filosofía \texttt{UNIX}}:
+        \begin{itemize}
+            \item Cada programa hace una cosa bien.
+            \item Los programas deben trabajar juntos.
+            \item Los programas manipulas flujos de texto, esa es la interfaz
+                universal.
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Administración de sistemas}
+    \framesubtitle{Genealogía de los sistemas \texttt{UNIX-like}}
+
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.9\textheight]{img/unixTimeline.pdf}
+        \captionsetup{textfont=tiny,labelformat=empty,justification=centering}
+        \caption{\ccPublicDomain\cite{unixTimeline}}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Administración de sistemas}
+    \framesubtitle{Definición \emph{shell}}
+
+    El \emph{Shell} de un sistema es un proceso que funciona de interfaz
+    entre el usuario y la computadora. Puede ser de solo texto o gráfico.
+
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.65\textheight]{img/os.pdf}
+        \captionsetup{textfont=tiny,labelformat=empty,justification=centering}
+        \caption{}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Administración de sistemas}
+    \framesubtitle{\emph{Shell} gráfico}
+
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.8\textheight]{img/xwinsys.png}
+        \captionsetup{textfont=tiny,labelformat=empty,justification=centering}
+        \caption{(MIT)\cite{xwinsys}}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Interfaz por linea de comandos}
+    \framesubtitle{El \texttt{UNIX} \emph{Shell}}
+
+    Es un interprete por linea de comandos común a todos los sistemas de tipo
+    \texttt{UNIX}.
+    \begin{itemize}
+        \item Interfaz de usuario y lenguaje de \emph{scripting}.
+        \item Variantes: \emph{sh}, \emph{BASH}, \emph{zsh}, \emph{bussybox},
+            etc.
+    \item Bajo consumo de recursos.
+    \end{itemize}
+
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.4\textheight]{img/unixShell.pdf}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Interfaz por linea de comandos}
+    \framesubtitle{\emph{Secure Shell}: \codeword{ssh}}
+    
+    \codeword{SSH} es un protocolo seguro de conexión remota. Su uso más
+    común es ejecutar un \codeword{shell} remoto en una terminal local.
+
+        \codeword{ssh \$USER@aula-ssh.fi.uncoma.edu.ar -p 60173}
+        \begin{itemize}
+            \item[] \tiny{\emph{(Remplazar \codeword{\$USER} por su usuario
+                de laboratorio)}}
         \end{itemize}
 
-\end{itemize}
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.6\textheight]{img/ssh.png}
+        \captionsetup{textfont=tiny,labelformat=empty}
+        \caption{Fuente desconocida}
+    \end{figure}
 
 \end{frame}
 
 \begin{frame}
 
-    \frametitle{Metodología}
-    \framesubtitle{Fechas TENTATIVAS}
+    \frametitle{Interfaz por linea de comandos}
+    \framesubtitle{Editor \texttt{Vim}}
+    
+    \codeword{Vim} (de \texttt{vi} \emph{improved}) es un editor modal para
+    terminales de texto altamente configurable que esta pre instalado en la
+    gran mayoría de los sistemas de tipo \texttt{UNIX}\footnote{sino,
+    posiblemente este instalado su predecesor \codeword{vi}}. Fue diseñado
+    especialmente para terminales con conexiones lentas, por lo que es ideal
+    para ser utilizado por \codeword{SSH}.
 
-\begin{itemize}
-
-    \item Primer examen parcial: \textbf{Jueves 08} de Mayo.
-    \item Segundo examen parcial: \textbf{Viernes 06} de Junio.
-    \item Recuperatorio del primer examen parcial: \textbf{Viernes 13} de
-        Junio.
-    \item Recuperatorio del segundo examen parcial: \textbf{Viernes 26} de
-        Junio.
-
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-
-    \frametitle{Finalizando}
-
-\begin{itemize}
-
-\item ¿Quiénes?
-
-\item ¿Qué?
-
-\item ¿Cuándo y dónde?
-
-\item ¿Cómo?
-
-\end{itemize}
+    \begin{figure}
+    \centering
+    \includegraphics[height=0.5\textheight]{img/vim.pdf}
+    \end{figure}
 
 \end{frame}
+
+
+\againframe{temario}
 
 \begin{frame}
 
